@@ -54,9 +54,17 @@ For example, if you input "Q", the shell will return "QQ", and if you input "QQ"
 \+ - Increments the accumulator. 
 The accumulator initializes at the value "0", but it is not directly accessible.
 
-Inputting anything else will result in a simulated error, stating "Invalid command." 
-Do note that the shell is case-sensitive. It will throw the aforementioned simulated error if you enter
-lowercase letters.
+From version 1.0a onwards, you can create an optional file called "cfg.ini" and place it on the same
+directory the script is on. The format is:
+```ini
+[pyhq9]
+case-sensitivity = [TRUE/FALSE]
+```
+If it is set to TRUE, only uppercase/capitalized letters will be accepted as input.
+If it is set to FALSE, both uppercase and lowercase letters will be accepted.
+
+If you do not create the config file, it will still work with no hindrance functionality, but case
+sensitivity will always be set to TRUE (uppercase only). 
 ***
 ### Interpreter implementation (interpreter-hq9+.py)
 
