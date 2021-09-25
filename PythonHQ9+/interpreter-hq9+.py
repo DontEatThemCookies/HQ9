@@ -13,7 +13,8 @@
 
 
 ######### IMPORTS #########
-import re 
+import re
+import datetime
 from time import sleep
 ###########################
 
@@ -33,8 +34,7 @@ acm = 0
 
 ##################################################
 
-print("PythonHQ9+ Interpreter")
-print("")
+
 print("Enter a valid filename to be used as input (e.g. sample.txt)")
 print("You can also drag and drop the file to this window in Windows 10.")
 print("Make sure the file in the same folder as this script.")
@@ -44,8 +44,13 @@ while True:
     if A == "exit()":
             exit()
     print("")
+    print("")
+    print("")
 
     # Interpreter begins here.
+    begin_time = datetime.datetime.now()
+    print("BEGIN SCRIPT")
+    print("#######################################")
     file = open(A)
     lines = file.readlines()
     for line in lines:
@@ -68,11 +73,18 @@ while True:
             for _ in range(F):
                 acm = acm + 1
                 print("Accumulator incremented by 1!")
-            
+    print("#######################################")
+    print("END SCRIPT")
     # Interpreter ends here.
-
+    end_time = datetime.datetime.now() - begin_time
     print("")
-    print("Interpreter ran successfully.")
+    print("")
+    print("")
+    print("")
+    print("Interpreter ran successfully. Script execution time:")
+    print(end_time)
+    print("")
     print("Input another filename, or type 'exit()' to exit.")
+    print("")
 
-# Version 1
+# Version 1.0a
