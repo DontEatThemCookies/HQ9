@@ -37,10 +37,11 @@ acm = 0
 print("Enter a valid filename to be used as input (e.g. sample.txt)")
 print("You can also drag and drop the file to this window in Windows 10.")
 print("Make sure the file in the same folder as this script.")
-print("Operations will be executed based on the order they are sorted in the file.")
 print("")
 while True:
     A = input()
+    if A == "exit()":
+            exit()
     print("")
 
     # Interpreter begins here.
@@ -72,8 +73,5 @@ while True:
     print("")
     print("Interpreter ran successfully.")
     print("Input another filename, or type 'exit()' to exit.")
-    Z = input()
-    if Z == "exit()":
-            exit()
 
 # Version 1
