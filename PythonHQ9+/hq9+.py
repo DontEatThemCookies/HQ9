@@ -12,16 +12,54 @@
 ########################################################
 #                    PYTHON IMPORTS                    #
 #                                                      #
+#                                                      #
 import re # primarily needed by Quine function         #
 from time import sleep # used by beer function         #
+from configparser import ConfigParser # for ini        #
+import os.path # for ini                               #
 #                                                      #
 ########################################################
-print("PyHQ9+")
+
+config = ConfigParser()
+existfile = os.path.isfile('cfg.ini')
+if existfile == True:
+    config.read('cfg.ini')
+    case_sensitivity = config.get('pyhq9', 'case-sensitivity')
+    case = True
+
+    if case_sensitivity == "FALSE":
+        case = False
+    elif case_sensitivity == "TRUE":
+        case = True
+    else:
+        print("Something is invalid with the ini, defaulting to case-sensitivity TRUE")
+        case = True
+else:
+    print("No ini file found, defaulting to case-sensitivity TRUE")
+    case = True
+
+    
+print("PyHQ9+ - HQ9+ Implementation for Python 3.x")
+print("Case sensitivity: " + str(case))
 print("")
 accumulator = 0 # Pre-define the accumulator.
 
 while True:
     A = input()
+
+    if case == False:
+        # Hello World
+        if A == "h":
+            print("Hello, World!")
+            print("")
+        # Quine function
+        re.search('[q]', A) # Search for 'Q' in the input
+        if re.search(r'[q]', A): # if a 'Q' was found, then
+            B = len(A) # Define B as the length of the input
+            C = A*B # Define C as input multiplied by length of input (A * B)
+            print(C) # Print the final output
+            print("")
+
 
     # Hello World
     if A == "H":
@@ -30,7 +68,7 @@ while True:
 
     # Quine function
     re.search('[Q]', A) # Search for 'Q' in the input
-    if re.search(r'Q', A): # if a 'Q' was found, then
+    if re.search(r'[Q]', A): # if a 'Q' was found, then
         B = len(A) # Define B as the length of the input
         C = A*B # Define C as input multiplied by length of input (A * B)
         print(C) # Print the final output
@@ -73,13 +111,24 @@ while True:
         print("")
 
     else:
-        re.search('[H, Q, 9, +]', A)
-        if not re.search(r'[H, Q, 9, +]', A):
-            print("Invalid command.")
-            print("")
+        if case == False:
+            re.search('[H, h, Q, q, 9, +]', A)
+            if not re.search('[H, h, Q, q, 9, +]', A):
+                print("Invalid command.")
+                print("")
+        elif case == True:
+            re.search('[H, Q, 9, +]', A)
+            if not re.search(r'[H, Q, 9, +]', A):
+                print("Invalid command.")
+                print("")
+        
+
+        
+
+        
         
             
-# Version 1
+# Version 1.0a
     
 
 
