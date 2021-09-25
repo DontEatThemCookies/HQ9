@@ -102,8 +102,9 @@ PythonHQ9+ is licensed under the permissive MIT License. The original .py files 
 is credited to Cliff L. Biffle.
 
 ## How to Install
-You can either clone the repository or download a ZIP, then navigate to the PythonHQ9+ folder and run the scripts.
-A Release will be published soon, for easier set up.
+You can download the binaries in the latest release and extract them to a folder.
+Alternatively, you can either clone the repository or download a ZIP, then navigate to the PythonHQ9+ folder and run the scripts.
+
 
 ***
 PythonHQ9+ Readme.md - Version 1, September 25, 2021  
