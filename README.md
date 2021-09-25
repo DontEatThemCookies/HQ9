@@ -6,4 +6,4 @@ Learn more about it here: http://cliffle.com/esoterica/hq9plus/
 
 [Python HQ9+ Readme](PythonHQ9%2B/pyhq9-readme.md)
 
-Yes, it is esoteric. Yes, it is a joke language.
+Yes, it is esoteric and a joke language.
