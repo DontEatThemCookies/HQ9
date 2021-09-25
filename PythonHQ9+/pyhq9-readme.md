@@ -51,7 +51,7 @@ For example, if you input "Q", the shell will return "QQ", and if you input "QQ"
 
 9 - prints the lyrics to "99 Bottles of Beer."
 
-+ - Increments the accumulator. 
+\+ - Increments the accumulator. 
 The accumulator initializes at the value "0", but it is not directly accessible.
 
 Inputting anything else will result in a simulated error, stating "Invalid command." 
