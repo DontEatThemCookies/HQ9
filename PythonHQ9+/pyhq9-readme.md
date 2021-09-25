@@ -1,4 +1,4 @@
-# PythonHQ9+ by David Costell
+# PythonHQ9+ by David Costell (DontEatThemCookies)
 
 Original concept by Cliff L. Biffle, 2001
 
