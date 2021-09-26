@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ Interpreter by David Costell, 9/25/2021       #
+# PyHQ9+ Interpreter by David Costell, 9/26/2021       #
 # Python implementation of the esoteric language HQ9+  #
 # Interprets commands from a file instead of a shell.  #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -13,9 +13,9 @@
 
 
 ######### IMPORTS #########
-import re
-import datetime
-from time import sleep
+import re # RegEx for command handling
+import datetime # to record script exec time
+from time import sleep # for timed delays
 ###########################
 
 
@@ -34,9 +34,9 @@ acm = 0
 
 ##################################################
 
-
+print("PyHQ9+ Interpreter")
 print("Enter a valid filename to be used as input (e.g. sample.txt)")
-print("You can also drag and drop the file to this window in Windows 10.")
+print("You can also drag and drop the file to this window if your terminal supports it.")
 print("Make sure the file in the same folder as this script.")
 print("")
 while True:
@@ -45,12 +45,12 @@ while True:
             exit()
     print("")
     print("")
-    print("")
 
     # Interpreter begins here.
-    begin_time = datetime.datetime.now()
+    begin_time = datetime.datetime.now() # Begin recording script execution time
     print("BEGIN SCRIPT")
     print("#######################################")
+    print("")
     file = open(A)
     lines = file.readlines()
     for line in lines:
@@ -73,18 +73,19 @@ while True:
             for _ in range(F):
                 acm = acm + 1
                 print("Accumulator incremented by 1!")
+    print("")
     print("#######################################")
     print("END SCRIPT")
     # Interpreter ends here.
-    end_time = datetime.datetime.now() - begin_time
+    sleep(0.01)
+    end_time = datetime.datetime.now() - begin_time # End recording script execution time
     print("")
     print("")
     print("")
-    print("")
-    print("Interpreter ran successfully. Script execution time:")
+    print("Interpreter ran successfully. Script execution time below: ")
     print(end_time)
     print("")
     print("Input another filename, or type 'exit()' to exit.")
     print("")
 
-# Version 1.0a
+# Version 1.0b
