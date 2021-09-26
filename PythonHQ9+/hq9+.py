@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ by David Costell, 9/25/2021                   #
+# PyHQ9+ by David Costell, 9/26/2021                   #
 # Python implementation of the esoteric language HQ9+  #
 # No dependencies, minimal imported modules            #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -20,6 +20,7 @@ import os.path # for ini                               #
 #                                                      #
 ########################################################
 
+# .INI handler 
 config = ConfigParser()
 existfile = os.path.isfile('cfg.ini')
 if existfile == True:
@@ -32,29 +33,31 @@ if existfile == True:
     elif case_sensitivity == "TRUE":
         case = True
     else:
-        print("Something is invalid with the ini, defaulting to case-sensitivity TRUE")
+        print("Error while parsing the .ini - defaulting to case-sensitivity TRUE")
         case = True
 else:
     print("No ini file found, defaulting to case-sensitivity TRUE")
     case = True
-
+# .INI handler ends here
     
 print("PyHQ9+ - HQ9+ Implementation for Python 3.x")
 print("Case sensitivity: " + str(case))
+print("To exit, type exit()")
 print("")
 accumulator = 0 # Pre-define the accumulator.
 
+# Shell
 while True:
     A = input()
 
     if case == False:
-        # Hello World
+        # Hello World lowercase
         if A == "h":
             print("Hello, World!")
             print("")
-        # Quine function
-        re.search('[q]', A) # Search for 'Q' in the input
-        if re.search(r'[q]', A): # if a 'Q' was found, then
+        # Quine function lowercase
+        re.search('[q]', A) # Search for 'q' in the input
+        if re.search(r'[q]', A): # if a 'q' was found, then
             B = len(A) # Define B as the length of the input
             C = A*B # Define C as input multiplied by length of input (A * B)
             print(C) # Print the final output
@@ -92,7 +95,7 @@ while True:
                 # ...keep singing!
                 print(str(x) + " " + beer + " of beer on the wall, " + str(x) + " " + beer + " of beer.")
                 print("Take one down and pass it around, " + str(x-1) + " " + beerminus + " of beer on the wall.")
-                sleep(0.5)
+                sleep(0.1)
             elif (x == 0): # Once there's no more beer...
                 # ...end the song!
                 print("No more bottles of beer on the wall, no more bottles of beer.")
@@ -110,6 +113,9 @@ while True:
         print("The accumulator has been incremented.")
         print("")
 
+    if A == "exit()":
+        exit()
+
     else:
         if case == False:
             re.search('[H, h, Q, q, 9, +]', A)
@@ -121,14 +127,15 @@ while True:
             if not re.search(r'[H, Q, 9, +]', A):
                 print("Invalid command.")
                 print("")
-        
+    
+# Shell ends here
 
         
 
         
         
             
-# Version 1.0a
+# Version 1.0b
     
 
 
