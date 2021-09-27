@@ -79,16 +79,16 @@ For example, if you input "Q", the shell will return "QQ", and if you input "QQ"
 
 9 - prints the lyrics to "99 Bottles of Beer."
 
-P - Increments the accumulator. 
+P+ - Increments the accumulator. 
 The accumulator initializes at the value "0", but it is not directly accessible.
 
 You will notice that the command to increment the accumulator is different from the one in the shell.
-The plus sign (+) had to be substituted for P due to an error with the RegEx module. A fix to this will be implemented soon.
+The plus sign (+) had to be substituted for P+ due to an error with the RegEx module not accepting a single "+" character.
 
-Operations are executed based on the order of the original initialism: H, Q, 9, + (P in this case)
+Operations are executed based on the order of the original initialism: H, Q, 9, + (P+ in this case)
 For example, a file with the following input: 
 ```
-HQPH
+HQP+H
 ```
 would be interpreted as:
 ```
