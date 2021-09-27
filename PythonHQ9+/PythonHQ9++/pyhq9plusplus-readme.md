@@ -25,7 +25,7 @@ The original HQ9+ specification popped up in 2001. It was not Turing-complete, a
 [Esolang Wiki](https://esolangs.org/wiki/HQ9%2B) - 
 [Biffle's Blog](http://cliffle.com/esoterica/hq9plus/)
 
-Among the variants aforementioned, HQ9++ is one of them. The specification was made by David M. Mar, and it makes HQ9+ object-oriented through the implementation of an additional command "++".
+Among the variants aforementioned, HQ9++ is one of them. The specification was made by David M. Mar, and it makes HQ9+ object-oriented through the implementation of an additional command "++". [Learn about it here.](https://www.dangermouse.net/esoteric/hq9plusplus.html)
 
 
 
