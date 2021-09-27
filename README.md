@@ -1,4 +1,4 @@
-# DontEatThemCookies' HQ9+
+# David Costell's HQ9+
 This repository contains my HQ9+ implementations. They are licensed under the MIT License.
 
 The original HQ9+ concept is credited to Cliff L. Biffle, 2001. 
