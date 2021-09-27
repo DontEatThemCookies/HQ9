@@ -1,12 +1,6 @@
-HHQQP
+HHQQP+
 
 this is a sample input file for the interpreter.
 valid operations: uppercase h, q, p and the number nine in digit form.
 it is recommended to comment in lowercase and not use the number nine
 in order to not interfere with the operations.
-
-the specific operations in this example are:
-
-HH - Execute HELLO WORLD 2 times 
-QQ - Quine two "Q" characters (outputs QQQQ)
-P - Increment the accumulator once

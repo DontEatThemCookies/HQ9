@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ Interpreter by David Costell, 9/26/2021       #
+# PyHQ9+ Interpreter by David Costell, 9/27/2021       #
 # Python implementation of the esoteric language HQ9+  #
 # Interprets commands from a file instead of a shell.  #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -68,8 +68,8 @@ while True:
             E = line.count('9')
             for _ in range(E):
                 beersong()
-        if re.search(r'P', line): # Increase the accumulator
-            F = line.count('P')
+        if re.search(r'P+', line): # Increase the accumulator
+            F = line.count('P+')
             for _ in range(F):
                 acm = acm + 1
                 print("Accumulator incremented by 1!")
@@ -77,7 +77,7 @@ while True:
     print("#######################################")
     print("END SCRIPT")
     # Interpreter ends here.
-    sleep(0.01)
+    sleep(0.00001)
     end_time = datetime.datetime.now() - begin_time # End recording script execution time
     print("")
     print("")
@@ -88,4 +88,4 @@ while True:
     print("Input another filename, or type 'exit()' to exit.")
     print("")
 
-# Version 1.0b
+# Version 1.0c
