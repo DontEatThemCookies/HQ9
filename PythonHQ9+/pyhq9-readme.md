@@ -83,7 +83,7 @@ P - Increments the accumulator.
 The accumulator initializes at the value "0", but it is not directly accessible.
 
 You will notice that the command to increment the accumulator is different from the one in the shell.
-The plus sign (+) had to be substituted for P due to an error with the RegEx module. A fix to this has not yet been found.
+The plus sign (+) had to be substituted for P due to an error with the RegEx module. A fix to this will be implemented soon.
 
 Operations are executed based on the order of the original initialism: H, Q, 9, + (P in this case)
 For example, a file with the following input: 
@@ -113,4 +113,4 @@ If you haven't figured out by now, you will need Python itself for the scripts t
 
 
 ***
-PythonHQ9+ Readme.md - Version 1, September 25, 2021  
+PythonHQ9+ Readme.md - Version 2, September 27, 2021  
