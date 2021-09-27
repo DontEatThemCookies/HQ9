@@ -59,7 +59,7 @@ case-sensitivity = [TRUE/FALSE]
 If it is set to TRUE, only uppercase/capitalized letters will be accepted as input.
 If it is set to FALSE, both uppercase and lowercase letters will be accepted.
 
-If you do not create the config file, it will still work with no hindrance functionality, but case
+If you do not create the config file, it will still work with no hindrance on the functionality, but case
 sensitivity will always be set to TRUE (uppercase only). 
 ***
 ### Interpreter implementation (interpreter-hq9+.py)
