@@ -1,6 +1,6 @@
 # PythonHQ9++ by David Costell (DontEatThemCookies)
 
-Original concept by Cliff L. Biffle, 2001
+Original concept by Cliff L. Biffle, 2001 - 
 Extension variant by David Morgan Mar
 
 This readme file contains some basic information on how PythonHQ9++ works. 
