@@ -10,4 +10,4 @@ The original HQ9+ concept is credited to Cliff L. Biffle, 2001.
 [Changelog](https://github.com/DontEatThemCookies/HQ9/wiki/HQ9--Implementations---CHANGELOG) -
 [Announcements](https://github.com/DontEatThemCookies/HQ9/wiki/Announcements)
 
-Yes, it is esoteric and a joke language.
+Classification: esoteric, joke
