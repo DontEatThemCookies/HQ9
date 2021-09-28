@@ -96,7 +96,7 @@ You will notice that the ++ command is replaced with "P". As of now, I haven't f
 P = ++
 ```
 
-Operations are executed based on the order of the original initialism: H, Q, 9, + (in this case, P+ and 2+)
+Operations are executed based on the order of the original initialism: H, Q, 9, + and ++ (++ is P due to limitations)
 For example, a file with the following input: 
 ```
 HQ+HP
