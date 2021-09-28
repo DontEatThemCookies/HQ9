@@ -79,16 +79,13 @@ For example, if you input "Q", the shell will return "QQ", and if you input "QQ"
 
 9 - prints the lyrics to "99 Bottles of Beer."
 
-P+ - Increments the accumulator. 
++ - Increments the accumulator. 
 The accumulator initializes at the value "0", but it is not directly accessible.
-
-You will notice that the command to increment the accumulator is different from the one in the shell.
-The plus sign (+) had to be substituted for P+ due to an error with the RegEx module not accepting a single "+" character.
 
 Operations are executed based on the order of the original initialism: H, Q, 9, + (P+ in this case)
 For example, a file with the following input: 
 ```
-HQP+H
+HQ+H
 ```
 would be interpreted as:
 ```
@@ -113,4 +110,4 @@ If you haven't figured out by now, you will need Python itself for the scripts t
 
 
 ***
-PythonHQ9+ Readme.md - Version 2, September 27, 2021  
+PythonHQ9+ Readme.md - Version 3, September 28, 2021  
