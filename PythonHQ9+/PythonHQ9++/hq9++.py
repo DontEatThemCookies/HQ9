@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9++ by David Costell, 9/27/2021                  #
+# PyHQ9++ by David Costell, 9/28/2021                  #
 # Python implementation of HQ9++, an HQ9+ variant      #
 # No dependencies, minimal imported modules            #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -19,6 +19,7 @@ import re # primarily needed by Quine function         #
 from time import sleep # used by beer function         #
 from configparser import ConfigParser # for ini        #
 import os.path # for ini                               #
+import sys # for version()                             #
 #                                                      #
 ########################################################
 
@@ -118,11 +119,14 @@ while True:
     if A == "++":
         accumulator = accumulator + 2
         print("The accumulator has been incremented.")
+        print("New object instantiated.")
         class GenericObj:
             obj = "GenericObject"
 
     if A == "exit()":
         exit()
+    if A == "version()":
+        print(sys.version)
 
     else:
         if case == False:
@@ -143,7 +147,7 @@ while True:
         
         
             
-# Version 1.0
+# Version 1.1
     
 
 

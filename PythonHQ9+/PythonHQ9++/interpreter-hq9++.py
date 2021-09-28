@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9++ Interpreter by David Costell, 9/27/2021      #
+# PyHQ9++ Interpreter by David Costell, 9/28/2021      #
 # Python implementation of HQ9++, an HQ9+ variant.     #
 # Interprets commands from a file instead of a shell.  #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -70,19 +70,21 @@ while True:
             E = line.count('9')
             for _ in range(E):
                 beersong()
-        if re.search(r'P+', line): # Increase the accumulator
-            F = line.count('P+')
+                
+        if '+' in line: # Increment accumulator
+            F = line.count('+')
+            for _ in range(F):
+                    acm = acm + 1
+                    print("Accumulator incremented by 1!")
+
+        if 'P' in line: # Increment accumulator twice, initialize an object
+            F = line.count('P')
             for _ in range(F):
                 acm = acm + 1
-                print("Accumulator incremented by 1!")
-
-        if re.search(r'2+', line): # Increase accumulator and create Object
-                G = line.count('2+')
-                for _ in range(G):
-                        acm = acm + 2
-                        print("Accumulator incremented by 2!")
-                        class GenericObj:
-                                obj = "GenericObject"
+                print("Accumulator incremented by 2!")
+                class GenericObj:
+                        obj = "GenericObject"
+                print("New object instantiated.")
                         
     print("")
     print("#######################################")
@@ -92,11 +94,10 @@ while True:
     end_time = datetime.datetime.now() - begin_time # End recording script execution time
     print("")
     print("")
-    print("")
     print("Interpreter ran successfully. Script execution time below: ")
     print(end_time)
     print("")
     print("Input another filename, or type 'exit()' to exit.")
     print("")
 
-# Version 1.0
+# Version 1.1
