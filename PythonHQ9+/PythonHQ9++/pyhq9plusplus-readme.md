@@ -82,24 +82,24 @@ For example, if you input "Q", the shell will return "QQ", and if you input "QQ"
 
 9 - prints the lyrics to "99 Bottles of Beer."
 
-P+ - Increments the accumulator. 
++ - Increments the accumulator. 
 The accumulator initializes at the value "0", but it is not directly accessible.
 
-2+ - Increments the accumulator two times, and instantiates a class with an object.
+P - Increments the accumulator two times, and instantiates a class with an object.
 As with the accumulator, the class and the object generated are not accessible.
 
-You will notice that the commands that involve incrementing the accumulator is different from the one in the shell.
-This is due to a RegEx bug, and the only way to bypass it was through the assignment of a different keyword.
+You will notice that the ++ command is replaced with "P". As of now, I haven't found a way to implement it such that it doesn't interfere with the original "+" command.
+
 ```py
 # Take note that:
-P+ = +
-2+ = ++
++ = +
+P = ++
 ```
 
 Operations are executed based on the order of the original initialism: H, Q, 9, + (in this case, P+ and 2+)
 For example, a file with the following input: 
 ```
-HQP+H2+
+HQ+HP
 ```
 would be interpreted as:
 ```
@@ -107,6 +107,7 @@ Hello, World! Hello, World!
 QQ
 Accumulator incremented by 1!
 Accumulator incremented by 2!
+New object instantiated.
 ```
 
 ## Dependencies
@@ -125,4 +126,4 @@ If you haven't figured out by now, you will need Python itself for the scripts t
 
 
 ***
-PythonHQ9++ Readme.md - Version 1, September 27, 2021  
+PythonHQ9++ Readme.md - Version 2, September 28, 2021  
