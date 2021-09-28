@@ -82,7 +82,7 @@ For example, if you input "Q", the shell will return "QQ", and if you input "QQ"
 \+ - Increments the accumulator. 
 The accumulator initializes at the value "0", but it is not directly accessible.
 
-Operations are executed based on the order of the original initialism: H, Q, 9, + (P+ in this case)
+Operations are executed based on the order of the original initialism: H, Q, 9, +
 For example, a file with the following input: 
 ```
 HQ+H
