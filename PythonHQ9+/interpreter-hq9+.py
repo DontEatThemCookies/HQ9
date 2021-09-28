@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ Interpreter by David Costell, 9/27/2021       #
+# PyHQ9+ Interpreter by David Costell, 9/28/2021       #
 # Python implementation of the esoteric language HQ9+  #
 # Interprets commands from a file instead of a shell.  #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -11,9 +11,7 @@
 # Python 3.x required                                  #
 ########################################################
 
-
 ######### IMPORTS #########
-import re # RegEx for command handling
 import datetime # to record script exec time
 from time import sleep # for timed delays
 ###########################
@@ -34,10 +32,11 @@ acm = 0
 
 ##################################################
 
-print("PyHQ9+ Interpreter")
-print("Enter a valid filename to be used as input (e.g. sample.txt)")
+print("PyHQ9+ Interpreter v1.1")
+print("")
+print("Enter a path to a file/filename to be interpreted (e.g. input.txt or C:\input.txt)")
 print("You can also drag and drop the file to this window if your terminal supports it.")
-print("Make sure the file in the same folder as this script.")
+print("If you only input a filename, ensure the file is in the same folder as this interpreter.")
 print("")
 while True:
     A = input()
@@ -48,38 +47,38 @@ while True:
 
     # Interpreter begins here.
     begin_time = datetime.datetime.now() # Begin recording script execution time
-    print("BEGIN SCRIPT")
+    print("BEGIN EXECUTION")
     print("#######################################")
     print("")
     file = open(A)
     lines = file.readlines()
     for line in lines:
-    
-        if re.search(r'H', line): # Hello World
-            B = line.count('H')
-            print(B*'Hello, World! ')
         
-        if re.search(r'Q', line): # Quine function
-            C = line.count('Q')
-            D = C * C
-            print(D*'Q')
+        if 'H' in line: # Hello World
+                B = line.count('H')
+                print(B*'Hello, World! ')
 
-        if re.search(r'9', line): # 99 Bottles of Beer
-            E = line.count('9')
-            for _ in range(E):
-                beersong()
-        if re.search(r'P+', line): # Increase the accumulator
-            F = line.count('P+')
-            for _ in range(F):
-                acm = acm + 1
-                print("Accumulator incremented by 1!")
+        if 'Q' in line: # Quine function
+                C = line.count('Q')
+                D = C * C
+                print(D*'Q')
+
+        if '9' in line: # 99 Bottles of Beer
+                E = line.count('9')
+                for _ in range(E):
+                        beersong()
+                
+        if '+' in line:
+                F = line.count('+')
+                for _ in range(F):
+                        acm = acm + 1
+                        print("Accumulator incremented by 1!")
     print("")
     print("#######################################")
-    print("END SCRIPT")
+    print("END OF FILE")
     # Interpreter ends here.
     sleep(0.00001)
     end_time = datetime.datetime.now() - begin_time # End recording script execution time
-    print("")
     print("")
     print("")
     print("Interpreter ran successfully. Script execution time below: ")
@@ -88,4 +87,4 @@ while True:
     print("Input another filename, or type 'exit()' to exit.")
     print("")
 
-# Version 1.0c
+# Version 1.1

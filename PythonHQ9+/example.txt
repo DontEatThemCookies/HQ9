@@ -1,4 +1,4 @@
-HHQQP+
+HHQQ+9
 
 this is a sample input file for the interpreter.
 valid operations: uppercase h, q, p and the number nine in digit form.

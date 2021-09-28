@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ by David Costell, 9/27/2021                   #
+# PyHQ9+ by David Costell, 9/28/2021                   #
 # Python implementation of the esoteric language HQ9+  #
 # No dependencies, minimal imported modules            #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -40,18 +40,19 @@ else:
     print("No ini file found, defaulting to case-sensitivity TRUE")
     case = True
 # .INI handler ends here
-    
+
+# Initialize the shell.    
 print("PyHQ9+ - HQ9+ Implementation for Python 3.x")
 print("Case sensitivity: " + str(case))
 print("To exit, type exit()")
 print("")
-accumulator = 0 # Pre-define the accumulator.
+accumulator = 0 # Initialize the accumulator.
 
 # Shell
 while True:
     A = input()
 
-    if case == False:
+    if case == False: # Command Handler for non-case sensitive input
         # Hello World lowercase
         if A == "h":
             print("Hello, World!")
@@ -64,6 +65,7 @@ while True:
             print(C) # Print the final output
             print("")
 
+    # Normal command handler for case sensitive (default) input
 
     # Hello World
     if A == "H":
@@ -110,16 +112,17 @@ while True:
 
     # Increment the accumulator
     if A == "+":
-        accumulator = accumulator + 1
-        print("The accumulator has been incremented.")
+        accumulator = accumulator + 1 # Increments the accumulator.
+        print("The accumulator has been incremented.") # Notify the end user.
         print("")
 
     if A == "exit()":
-        exit()
+        exit() # Exits
     if A == "version()":
-        print(sys.version)
+        print(sys.version) # Displays Python version
 
-    else:
+    else: # if the input wasn't ANY of the above commands:
+
         if case == False:
             re.search('[H, h, Q, q, 9, +]', A)
             if not re.search('[H, h, Q, q, 9, +]', A):
@@ -133,12 +136,5 @@ while True:
     
 # Shell ends here
 
-        
-
-        
-        
-            
-# Version 1.0c
-    
-
-
+                  
+# Version 1.1
