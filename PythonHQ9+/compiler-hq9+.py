@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ Compiler by David Costell, 9/29/2021          #
+# PyHQ9+ Compiler by David Costell, 9/30/2021          #
 # Python implementation of the esoteric language HQ9+  #
 # "Compiles" a Python3 file from HQ9+ user input.      #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -115,9 +115,9 @@ try:
                 
              
 
-except FileExistsError:
+except FileExistsError: # for when a file is already using that filename
         print("An error occurred while attempting compile!")
-        print("Error: File already exists with the same name -", sys.exc_info()[0])
+        print("Specific error: File already exists with the same name -", sys.exc_info()[0])
         e = input("Would you like to remove the file? (Irreversible!) [Y/N] ")
         if e == "Y":
                 os.remove(filename)
@@ -131,15 +131,23 @@ except FileExistsError:
         else:
                 exit()
                 
-except NameError:
+except NameError: # for NameErrors
         pass
+
+except OSError: # for special chars in filename
+        print("An error occured while attempting compile!")
+        print("Specific error: OSError ", sys.exc_info()[0])
+        print("This error most commonly shows up when you define a filename with special chars.")
+        print("They are not able to be used in filenames.")
+        sleep(5)
+        exit()
         
 except: # for other errors
         print("An error occurred while attempting compile!")
         print("Specific error: ", sys.exc_info()[0])
         os.remove(filename)
         sleep(5)
-
+        
 print("END COMPILE")
 print("The code has compiled successfully.")
 print("File compiled as: "+filename)
@@ -148,4 +156,4 @@ endtime = datetime.datetime.now() - begin
 print(endtime)
 sleep(3)
 
-# Beta 2
+# Beta 3
