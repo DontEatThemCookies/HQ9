@@ -19,11 +19,20 @@ from time import sleep # for timed delays
 
 ################## DEFINITIONS ##################
 def beersong():    
-        for i in range (99,-1,-1):
-            if i > 0:
+        for i in range (99,-1,-1):            
+            if i > 2:
                 print(i, "bottles of beer on the wall,", i, " bottles of beer,")
                 print("Take one down and pass it around,", i-1, "bottles of beer on the wall.\n")
                 sleep(0.1)
+                
+            elif i == 2:
+                    print(i, "bottles of beer on the wall,", i, " bottles of beer,")
+                    print("Take one down and pass it around,", i-1, "bottle of beer on the wall.\n")
+                    sleep(0.1)
+            elif i == 1:
+                    print(i, "bottle of beer on the wall,", i, " bottle of beer,")
+                    print("Take one down and pass it around,", i-1, "bottles of beer on the wall.\n")
+                    sleep(0.1)
             else:
                 print("No more bottles of beer on the wall, no more bottles of beer.")
                 print("Go to the store and buy some more, 99 bottles of beer on the wall.")
@@ -32,12 +41,15 @@ acm = 0
 
 ##################################################
 
+# Initialization
+
 print("PyHQ9+ Interpreter v1.1")
 print("")
 print("Enter a path to a file/filename to be interpreted (e.g. input.txt or C:\input.txt)")
 print("You can also drag and drop the file to this window if your terminal supports it.")
 print("If you only input a filename, ensure the file is in the same folder as this interpreter.")
 print("")
+
 while True:
     A = input()
     if A == "exit()":
@@ -87,4 +99,4 @@ while True:
     print("Input another filename, or type 'exit()' to exit.")
     print("")
 
-# Version 1.1
+# Version 1.1a
