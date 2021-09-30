@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ Interpreter by David Costell, 9/28/2021       #
+# PyHQ9+ Interpreter by David Costell, 9/30/2021       #
 # Python implementation of the esoteric language HQ9+  #
 # Interprets commands from a file instead of a shell.  #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
