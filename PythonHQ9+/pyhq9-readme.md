@@ -98,7 +98,7 @@ Accumulator incremented by 1!
 ***
 ### Compiler implementation (compiler-hq9+.py)
 
-This script takes user input (must be valid HQ9+) from the console and "compile" (translate) the code to Python 3.
+This script takes user input (must be valid HQ9+) from the console and "compiles" (translates) the code to Python 3.
 First it will prompt you what to name the file, and then the actual commands to specify.
 This implementation is still a Beta, and as such no guarantees on completeness are made on this compiler.
 
