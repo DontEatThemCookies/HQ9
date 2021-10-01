@@ -12,6 +12,7 @@ It also gives you information on the premise of HQ9+ itself.
    * [PythonHQ9+](#pythonhq9)
      * [Shell](#shell-implementation-hq9py)
      * [Interpreter](#interpreter-implementation-interpreter-hq9py)
+     * [Compiler](#compiler-implementation-compiler-hq9py)
    * [Dependencies](#dependencies)
    * [License](#license)
    * [How to Install](#how-to-install)
@@ -93,6 +94,53 @@ Hello, World! Hello, World!
 QQ
 Accumulator incremented by 1!
 ```
+
+***
+### Compiler implementation (compiler-hq9+.py)
+
+This script takes user input (must be valid HQ9+) from the console and "compile" (translate) the code to Python 3.
+First it will prompt you what to name the file, and then the actual commands to specify.
+This implementation is still a Beta, and as such no guarantees on completeness are made on this compiler.
+
+The commands are as follows:
+
+H - prints "Hello, World!"
+
+Q - prints a multiplied version of itself (also called a quine)
+For example, if you input "Q", the shell will return "QQ", and if you input "QQ", it will return QQQQ.
+
+9 - prints the lyrics to "99 Bottles of Beer."
+
+\+ - Increments the accumulator. 
+The accumulator initializes at the value "0", but it is not directly accessible.
+
+The compiler translates the input based on the order of the original initialism: H, Q, 9, +
+For example, if the input was:
+```
+HHQQH
+```
+then the compiler's full output file would be (as of Beta 3):
+```py
+#!/usr/bin/env python3 
+#Compiled by the PyHQ9+ Compiler (Python 3) - 2021-10-01 13:01:58.386800 
+A = 'HHQQH' 
+acm = 0 # Accumulator 
+ 
+H = A.count('H') # Hello World 
+print(H*'Hello, World! ') 
+ 
+q1 = A.count('Q') # Quine function 
+q2 = q1 * q1 
+print(q2*'Q') 
+ 
+ 
+ 
+ 
+ 
+input('Press any key to continue...')
+```
+
+Should a filename specified by the user conflict with an existing file that uses the same name, the compiler will throw an error and give you an option to delete the file. Normally this is not recommended, as you can simply re-launch the compiler and specify a different filename.
 
 ## Dependencies
 PythonHQ9+ aims to be as dependency-free as possible. As of Version 1, there are no external modules needed for PythonHQ9+
