@@ -1,6 +1,6 @@
-HHQQ+9
+HHHQQ9+++
 
-this is a sample input file for the interpreter.
+this is a sample input file for interpreter and compiler.
 valid operations: uppercase h, q, p and the number nine in digit form.
 it is recommended to comment in lowercase and not use the number nine
 in order to not interfere with the operations.
