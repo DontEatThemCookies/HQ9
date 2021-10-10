@@ -12,4 +12,6 @@ The original HQ9+ concept is credited to Cliff L. Biffle, 2001.
 [Changelog](https://github.com/DontEatThemCookies/HQ9/wiki/HQ9--Implementations---CHANGELOG) -
 [Announcements](https://github.com/DontEatThemCookies/HQ9/wiki/Announcements)
 
+Tested in: Windows 10 (Python 3.6, 3.9), Ubuntu 20.04 (Python 3.8)
+
 Classification: esoteric, joke
