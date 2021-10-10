@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ by David Costell, 9/30/2021                   #
+# PyHQ9+ by David Costell, 10/10/2021                  #
 # Python implementation of the esoteric language HQ9+  #
-# No dependencies, minimal imported modules            #
+# No pip dependencies, only internal modules.          #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
 #                                                      #
 # Learn more about HQ9+ here:                          #
@@ -120,7 +120,11 @@ while True:
     else: # if the input wasn't ANY of the above commands:
 
         lc = ['H', 'h', 'Q', 'q', '9', '+']
-        uc = ['H', 'Q', '9', '+'] # to be used soon
+        uc = ['H', 'Q', '9', '+']
+
+        # Still being re-worked.
+        # Invalid inputs will return empty for now.
+
 
         '''if case == False:
             re.search('[H, h, Q, q, 9, +]', A)
@@ -132,8 +136,6 @@ while True:
             if not re.search(r'[H, Q, 9, +]', A):
                 print("Invalid command.")
                 print("")'''
-    
-# Shell ends here
 
                   
-# Version 1.1a
+# Version 1.1b
