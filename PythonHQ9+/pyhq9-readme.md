@@ -154,7 +154,7 @@ is credited to Cliff L. Biffle.
 You can download the binaries in the latest release and extract them to a folder.
 Alternatively, you can either clone the repository or download a ZIP, then navigate to the PythonHQ9+ folder and run the scripts.
 
-If you haven't figured out by now, you will need Python itself for the scripts to work. [Download the latest Python version](https://www.python.org/downloads/) for optimal results.
+If you haven't figured out by now, you will need Python itself for the scripts to work. If you wish, you can [download the latest Python version](https://www.python.org/downloads/) for optimal results, but PyHQ9+ has been tested in 3.6 and it still works as intended. I do not recommend 3.5 or older.
 
 
 ***
