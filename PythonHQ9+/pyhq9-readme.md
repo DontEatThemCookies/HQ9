@@ -20,7 +20,7 @@ It also gives you information on the premise of HQ9+ itself.
 
 ## HQ9+
 
-The original HQ9+ specification popped up in 2001. It was not Turing-complete, and it had a mere 4 instructions. It is also classified as a joke language. Over time, HQ9+ got recognized in the esoteric language community, with many implementations popping up, with interpreters written in C, Pascal, JavaScript, PHP and others, as well as new variants. This included HQ9++, HQ9+-, HQ9+~, HQ9F+, CHIQRSX9+, HQ9+B, and many more. All of these variants had something new to offer, one variant even makes it Turing-complete. You can find resources on HQ9+ and its variants below:
+The original HQ9+ specification popped up in 2001. It was not Turing-complete, and it had a mere 4 instructions. It was also classified as a joke language. Over time, HQ9+ got recognized in the esoteric language community, with many implementations popping up, with interpreters written in C, Pascal, JavaScript, PHP and others, as well as new variants. This included HQ9++, HQ9+-, HQ9+~, HQ9F+, CHIQRSX9+, HQ9+B, and many more. All of these variants had something new to offer, one variant even makes it Turing-complete. You can find resources on HQ9+ and its variants below:
 
 [Esolang Wiki](https://esolangs.org/wiki/HQ9%2B) - 
 [Biffle's Blog](http://cliffle.com/esoterica/hq9plus/)
