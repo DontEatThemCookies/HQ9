@@ -142,6 +142,16 @@ input('Press any key to continue...')
 
 Should a filename specified by the user conflict with an existing file that uses the same name, the compiler will throw an error and give you an option to delete the file. Normally this is not recommended, as you can simply re-launch the compiler and specify a different filename.
 
+From Release Candidate 1 onwards, you can create an optional file called "cfg.ini" and place it on the same
+directory the script is on. If you already have a "cfg.ini" file for the shell, you may simply append it to the end of the file. The format is:
+```ini
+[compiler]
+inputype = USER
+```
+
+USER - Compiler will take input from user (Default)
+FILE - Compiler will take input from a file 
+
 ## Dependencies
 PythonHQ9+ aims to be as dependency-free as possible. As of Version 1, there are no external modules needed for PythonHQ9+
 (you don't have to run pip install whateverpackage) and it is extremely likely future versions will also not need them.
@@ -158,4 +168,4 @@ If you haven't figured out by now, you will need Python itself for the scripts t
 
 
 ***
-PythonHQ9+ Readme.md - Version 4, October 1, 2021  
+PythonHQ9+ Readme.md - Version 5, October 11, 2021  
