@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ by David Costell, 10/10/2021                  #
+# PyHQ9+ by David Costell, 10/19/2021                  #
 # Python implementation of the esoteric language HQ9+  #
 # No pip dependencies, only internal modules.          #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -12,8 +12,7 @@
 ########################################################
 #                    PYTHON IMPORTS                    #
 #                                                      #
-#                                                      #
-import re # will be disused soon                       #
+#                                                      #                 
 from time import sleep # used by beer function         #
 from configparser import ConfigParser # for ini        #
 import os.path # for ini                               #
@@ -54,12 +53,11 @@ while True:
 
     if case == False: # Command Handler for non-case sensitive input
         # Hello World lowercase
-        if A == "h":
+        if "A" == "h":
             print("Hello, World!")
             print("")
         # Quine function lowercase
-        re.search('[q]', A) # Search for 'q' in the input
-        if re.search(r'[q]', A): # if a 'q' was found, then
+        if Q in A: # if a 'q' was found, then
             B = len(A) # Define B as the length of the input
             C = A*B # Define C as input multiplied by length of input (A * B)
             print(C) # Print the final output
@@ -73,8 +71,7 @@ while True:
         print("")
 
     # Quine function
-    re.search('[Q]', A) # Search for 'Q' in the input
-    if re.search(r'[Q]', A): # if a 'Q' was found, then
+    if "Q" in A: # if a 'Q' was found, then
         B = len(A) # Define B as the length of the input
         C = A*B # Define C as input multiplied by length of input (A * B)
         print(C) # Print the final output
@@ -122,14 +119,25 @@ while True:
         lc = ['H', 'h', 'Q', 'q', '9', '+']
         uc = ['H', 'Q', '9', '+']
 
-        if case == False:
-            if A not in lc:
+        if case == True:
+            if any((c in uc) for c in A):
+                pass
+            else:
+                print('Invalid command.')
+        elif case == False:
+            if any((c in lc) for c in A):
+                pass
+            else:
+                print('Invalid command.')
+
+        '''if case == False:
+            if lc not in A:
                 print("Invalid command.")
                 print("")
         
         elif case == True:
-            if A not in uc:
+            if uc not in A:
                 print("Invalid command.")
-                print("")
+                print("")'''
 
 # Version 1.2
