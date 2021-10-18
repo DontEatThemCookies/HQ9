@@ -122,20 +122,14 @@ while True:
         lc = ['H', 'h', 'Q', 'q', '9', '+']
         uc = ['H', 'Q', '9', '+']
 
-        # Still being re-worked.
-        # Invalid inputs will return empty for now.
-
-
-        '''if case == False:
-            re.search('[H, h, Q, q, 9, +]', A)
-            if not re.search('[H, h, Q, q, 9, +]', A):
+        if case == False:
+            if A not in lc:
                 print("Invalid command.")
                 print("")
+        
         elif case == True:
-            re.search('[H, Q, 9, +]', A)
-            if not re.search(r'[H, Q, 9, +]', A):
+            if A not in uc:
                 print("Invalid command.")
-                print("")'''
+                print("")
 
-                  
-# Version 1.1b
+# Version 1.2
