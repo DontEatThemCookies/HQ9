@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ Interpreter by David Costell, 10/10/2021      #
+# PyHQ9+ Interpreter by David Costell, 10/24/2021      #
 # Python implementation of the esoteric language HQ9+  #
 # Interprets commands from a file instead of a shell.  #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -66,11 +66,11 @@ while True:
     print("#######################################")
     w()
     try:
-            file = open(A)
+        file = open(A)
     except FileNotFoundError:
-            print('The filename/filepath does not exist.')
-            input()
-            exit()
+        print('The filename/filepath does not exist.')
+        input()
+        exit()
             
             
     lines = file.readlines()
@@ -109,4 +109,6 @@ while True:
     print("Input another filename, or type 'exit()' to exit.")
     w()
 
-# Version 1.1b
+
+
+# Version 1.2

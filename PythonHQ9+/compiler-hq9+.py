@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ Compiler by David Costell, 10/10/2021         #
+# PyHQ9+ Compiler by David Costell, 10/24/2021         #
 # Python implementation of the esoteric language HQ9+  #
 # "Compiles" a Python3 file from HQ9+ user input.      #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -10,10 +10,6 @@
 # http://cliffle.com/esoterica/hq9plus/                #
 # Python 3.x required                                  #
 ########################################################
-
-# Disclaimer: This is a BETA release of the PyHQ9+ compiler.
-# Optimizations and/or cleanliness not guaranteed for this release.
-# Currently, this compiler is a PROOF-OF-CONCEPT.
 
 ######### IMPORTS #########
 import os # for exception catching
@@ -88,7 +84,7 @@ else:
 
 if inptyp == False: # Input from file
         print("PyHQ9+ Compiler")
-        print("Compiles HQ9+ into Python 3 code.")
+        print("\"Compiles\" HQ9+ into Python 3 code.")
         print("Input the necessary info to begin compilation.")
         print("NOTE: The output file will be written to the same directory as this compiler.")
         print("")
@@ -170,7 +166,7 @@ if inptyp == False: # Input from file
 
 elif inptyp == True: # Input from user
         print("PyHQ9+ Compiler")
-        print("Compiles HQ9+ into Python 3 code.")
+        print("\"Compiles\" HQ9+ into Python 3 code.")
         print("Input the necessary info to begin compilation.")
         print("NOTE: The output file will be written to the same directory as this compiler.")
         print("")
@@ -242,7 +238,7 @@ elif inptyp == True: # Input from user
 
         except OSError: # for special chars in filename
                 print("An error occured while attempting compile!")
-                print("Specific error: OSError ", sys.exc_info()[0])
+                print("Specific error: ", sys.exc_info()[0])
                 print("This error most commonly shows up when you define a filename with special chars.")
                 print("They are unable to be used in filenames.")
                 sleep(5)
@@ -263,4 +259,4 @@ elif inptyp == True: # Input from user
         sleep(3)
  
 
-# RC1
+# Version 1, shipped with PyHQ9+ 1.2

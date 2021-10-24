@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ by David Costell, 10/19/2021                  #
+# PyHQ9+ by David Costell, 10/24/2021                  #
 # Python implementation of the esoteric language HQ9+  #
 # No pip dependencies, only internal modules.          #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
