@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ########################################################
-# PyHQ9+ by David Costell, 10/24/2021                  #
+# PyHQ9+ by David Costell, 10/25/2021                  #
 # Python implementation of the esoteric language HQ9+  #
 # No pip dependencies, only internal modules.          #
 # Original HQ9+ concept by Cliff L. Biffle, 2001       #
@@ -26,7 +26,6 @@ existfile = os.path.isfile('cfg.ini')
 if existfile == True:
     config.read('cfg.ini')
     case_sensitivity = config.get('pyhq9', 'case-sensitivity')
-    case = True
 
     if case_sensitivity == "FALSE":
         case = False
