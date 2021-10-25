@@ -1,11 +1,19 @@
 # David Costell's HQ9+
 This repository contains my HQ9+ implementations. They are licensed under the MIT License.
 
+HQ9+ is a joke esoteric programming language with only four instructions. They are:
+```
+H - Print "Hello, World!"
+
+Q - Multiply "Q" by the number of times it appears in the input and prints it out (e.g. "QQ" prints out "QQQQ"
+
+9 - Prints the canonical lyrics to the 99 Bottles of Beer song.
+
++ - Increments an inaccessible accumulator by one.
+```
 Development work is focused on PythonHQ9+, an implementation in Python.
 
-NOTE: The compiler is still in its beta stage! No guarantee is made to its quality and functionality!
-
-The original HQ9+ concept is credited to Cliff L. Biffle, 2001. 
+Original HQ9+ concept credited to Cliff L. Biffle, 2001. 
 [Learn more about it here](http://cliffle.com/esoterica/hq9plus/)  
 
 [Python HQ9+ Readme](PythonHQ9%2B/pyhq9-readme.md) - [Official Documentation](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation) - [Repository Wiki](https://github.com/DontEatThemCookies/HQ9/wiki) - 
@@ -15,5 +23,3 @@ The original HQ9+ concept is credited to Cliff L. Biffle, 2001.
 Right now, the best way to get up to the latest news for PyHQ9+ is through the announcements.
 
 Tested in: Windows 10 (Python 3.6, 3.9), Ubuntu 20.04 (Python 3.8)
-
-Classification: esoteric, joke
