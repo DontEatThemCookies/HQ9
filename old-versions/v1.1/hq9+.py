@@ -27,7 +27,6 @@ existfile = os.path.isfile('cfg.ini')
 if existfile == True:
     config.read('cfg.ini')
     case_sensitivity = config.get('pyhq9', 'case-sensitivity')
-    case = True
 
     if case_sensitivity == "FALSE":
         case = False
