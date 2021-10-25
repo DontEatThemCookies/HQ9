@@ -1,6 +1,6 @@
 # David Costell's HQ9+
 
-## WARNING: As of 10/25/2021, a CRITICAL BUG was found in the SHELL version of PythonHQ9+ and it has affected nearly every version. At the moment, it is STRONGLY RECOMMENDED that you acquire versions of PythonHQ9+ from the "old-versions" folder, as the releases have not been hotfixed yet. Thank you.
+## WARNING: As of 10/25/2021, a CRITICAL BUG was found in the SHELL version of PythonHQ9+ and it has affected nearly every version. At the moment, it is STRONGLY RECOMMENDED that you acquire versions of PythonHQ9+ from the "old-versions" folder. Releases "v1.2" and "v1.1b" have been patched with the hotfix.
 
 This repository contains my HQ9+ implementations. They are licensed under the MIT License.
 
