@@ -1,0 +1,6 @@
+HHQQP
+
+this is a sample input file for the interpreter.
+capitalized h, q, p and the number nine are all assigned to functions.
+it is recommended to comment in lowercase and not use the number nine
+in order to not interfere with the operations.
