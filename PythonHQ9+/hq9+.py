@@ -52,7 +52,7 @@ while True:
 
     if case == False: # Command Handler for non-case sensitive input
         # Hello World lowercase
-        if "A" == "h":
+        if A == "h":
             print("Hello, World!")
             print("")
         # Quine function lowercase
