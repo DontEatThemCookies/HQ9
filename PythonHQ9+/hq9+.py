@@ -56,7 +56,7 @@ while True:
             print("Hello, World!")
             print("")
         # Quine function lowercase
-        if Q in A: # if a 'q' was found, then
+        if "Q" in A: # if a 'q' was found, then
             B = len(A) # Define B as the length of the input
             C = A*B # Define C as input multiplied by length of input (A * B)
             print(C) # Print the final output
