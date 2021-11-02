@@ -68,7 +68,7 @@ else:
     case = True
 
 # Main screen
-print("PythonHQ9+ v2 - an HQ9+ implementation in Python")
+print("PythonHQ9+ v2 - Refreshed HQ9+ implementation in Python")
 print("Case sensitivity:", case)
 print("exit() to terminate the shell.")
 print("")
