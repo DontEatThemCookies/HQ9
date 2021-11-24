@@ -146,7 +146,7 @@ if inptyp == False: # Input from file
                 sleep(5)
                 exit()
                 
-        except: # for other errors
+        except Exception: # for other errors
                 print("An error occurred while attempting compile!")
                 print("Specific error: ", sys.exc_info()[0])
                 os.remove(filename)
