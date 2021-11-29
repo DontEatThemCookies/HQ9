@@ -1,1 +1,0 @@
-This folder contains files for the PythonHQ9+ v2.0 Beta. They are certainly not to be treated production-ready, as there may be many bugs that lie ahead. Tread with caution.
