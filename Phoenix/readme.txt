@@ -12,6 +12,8 @@ Easy and intuitive usage, simple design
 Optimized to run faster than PyHQ9+ v1
 Overall a huge improvement over PyHQ9+ v1
 
+All instructions are case-insensitive in the Phoenix Engine.
+
 -------------------------------------------------------------------------------------------------
 
 USAGE
