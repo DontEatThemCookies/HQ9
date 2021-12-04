@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Phoenix HQ9+ Engine - BETA 1
+Phoenix HQ9+ Engine - BETA 2
 Python 3
 
 The following software is in the Beta stage.
@@ -14,7 +14,7 @@ Learn more about it through the below links:
 http://cliffle.com/esoterica/hq9plus/
 https://esolangs.org/wiki/HQ9%2B
 
-11/30/2021
+12/4/2021
 """
 
 def main():
@@ -29,9 +29,9 @@ def main():
         """
         print("Help on Phoenix Engine:")
         print()
-        print("python phoenix.py [filename] {-t} {-h}")
-        print("[filename] - Specify filename to interpret. If left empty, Phoenix enters REPL mode.")
-        print("[-t] - Optional flag. Transcompiles the source HQ9+ file to Python 3.")
+        print("python phoenix.py [input filename] {output filename} {-h}")
+        print("[input filename] - Specify name of the file to interpret/transcompile.")
+        print("[output filename] - Specify name of the output file (must be specified for transcompilation)")
         print("[-h] - Optional flag. Displays this help prompt.")
 
     def repl():
@@ -99,7 +99,7 @@ def main():
 
             if instruction == "version()":
                 print("Phoenix HQ9+ Engine")
-                print("Version BETA I")
+                print("Version BETA 2")
             if instruction == "exit()":
                 exit()
 
@@ -166,7 +166,7 @@ def main():
         print("Execution complete.")
         input("Press ENTER to exit.")
 
-    def transcompiler(file):
+    def transcompiler(file, output):
         """
         Phoenix Engine Transcompiler (Source-to-Source Compiler)
 
@@ -180,7 +180,7 @@ def main():
             print("Ensure the filename was correctly spellled")
             print("and that the specified file exists.")
             input();exit()
-        outputfile = open("outputfile.py", "w")
+        outputfile = open(output, "w")
         instructionlist = []
         linelist = []
         for line in sourcefile:
@@ -245,14 +245,12 @@ for _ in range(line.count("+")):
         if param1 == "-h":
             # Help
             _help_()
-        elif param1 == "-t":
-            print("Error: no file specified to transcompile!")
         else:
             filename = param1
-            if "-t" in sys.argv:
+            try:
                 # Transcompiler
-                transcompiler(filename)
-            else:
+                transcompiler(filename, sys.argv[2])
+            except IndexError:
                 # Interpreter
                 interpreter(filename)
     except IndexError:
