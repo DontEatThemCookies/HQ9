@@ -235,7 +235,7 @@ for _ in range(line.count("+")):
         for i in instructionlist:
             outputfile.write(i+"\n")
         outputfile.write("\n"+"input()"+"\n")
-        print("Transcompilation succeeded (outputfile.py)")
+        print("Transcompilation succeeded.")
         input("Press ENTER to exit.")
 
     # ARGUMENT PARSING
