@@ -1,6 +1,6 @@
 # David Costell's HQ9+
 
-## Announcement: Development on Phoenix Engine REMAINS ACTIVE, however a new HQ9+ implementation written in Go is also being worked on! Stay tuned!
+## Announcement: Development has been focused into two implementations: Phoenix Engine REMAINS ACTIVELY DEVELOPED, while a new implementation in Go codenamed Cheetah has just gotten its first beta released!
 
 This repository contains my HQ9+ implementations. They are licensed under the MIT License.
 
