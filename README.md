@@ -15,14 +15,15 @@ Q - Multiply "Q" by the number of times it appears in the input and prints it ou
 + - Increments an inaccessible accumulator by one.
 ```
 Development work is focused on PythonHQ9+, an implementation in Python.
+A Golang implementation is also in the works.
 
 Original HQ9+ concept credited to Cliff L. Biffle, 2001. 
 [Learn more about it here](http://cliffle.com/esoterica/hq9plus/)  
 
-[Python HQ9+ Readme](PythonHQ9%2B/pyhq9-readme.md) | [Official Documentation (v1)](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation-v1) | [Official Documentation (v2)](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation-v2) | [Repository Wiki](https://github.com/DontEatThemCookies/HQ9/wiki) | 
-[Changelog](https://github.com/DontEatThemCookies/HQ9/wiki/Changelog#changelog) |
+[PyHQ9+ Readme](PythonHQ9%2B/pyhq9-readme.md) | [PyHQ9+ Documentation (v1)](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation-v1) | [PyHQ9+ Documentation (v2)](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation-v2) | [Repository Wiki](https://github.com/DontEatThemCookies/HQ9/wiki) | 
+[PyHQ9+ Changelog](https://github.com/DontEatThemCookies/HQ9/wiki/Changelog#changelog) |
 [Announcements](https://github.com/DontEatThemCookies/HQ9/wiki/Announcements)
 
-Right now, the best way to get up to the latest news for PyHQ9+ is through the announcements.
+Right now, the best way to get up to the latest news for all HQ9+ implementations is through the announcements.
 
-Tested in: Windows 10 (Python 3.6, 3.9), Ubuntu 20.04 (Python 3.8)
+Tested in: Windows 10 (Python 3.6, 3.9) (Go 1.17), Ubuntu 20.04 (Python 3.8)
