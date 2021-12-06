@@ -1,6 +1,6 @@
 # David Costell's HQ9+
 
-## Announcement: Phoenix Engine's first Beta has been released! The first release candidate is expected to come out soon!
+## Announcement: Development on Phoenix Engine REMAINS ACTIVE, however a new HQ9+ implementation written in Go is also being worked on! Stay tuned!
 
 This repository contains my HQ9+ implementations. They are licensed under the MIT License.
 
