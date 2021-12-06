@@ -8,7 +8,7 @@ HQ9+ is a joke esoteric programming language with only four instructions. They a
 ```
 H - Print "Hello, World!"
 
-Q - Multiply "Q" by the number of times it appears in the input and prints it out (e.g. "QQ" prints out "QQQQ"
+Q - Multiply "Q" by the number of times it appears in the input and prints it out (e.g. "QQ" prints out "QQQQ")
 
 9 - Prints the canonical lyrics to the 99 Bottles of Beer song.
 
