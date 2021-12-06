@@ -20,8 +20,9 @@ A Golang implementation is also in the works.
 Original HQ9+ concept credited to Cliff L. Biffle, 2001. 
 [Learn more about it here](http://cliffle.com/esoterica/hq9plus/)  
 
-[PyHQ9+ Readme](PythonHQ9%2B/pyhq9-readme.md) | [PyHQ9+ Docs (v1)](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation-v1) | [PyHQ9+ Docs (v2)](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation-v2) | [Repo Wiki](https://github.com/DontEatThemCookies/HQ9/wiki) | 
+[PyHQ9+ Readme](PythonHQ9%2B/pyhq9-readme.md) | [PyHQ9+ Docs (v1)](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation-v1) | [PyHQ9+ Docs (v2)](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation-v2) |
 [PyHQ9+ Changelog](https://github.com/DontEatThemCookies/HQ9/wiki/Changelog#changelog) |
+[Repo Wiki](https://github.com/DontEatThemCookies/HQ9/wiki) | 
 [Announcements](https://github.com/DontEatThemCookies/HQ9/wiki/Announcements)
 
 Right now, the best way to get up to the latest news for all HQ9+ implementations is through the announcements.
