@@ -1,12 +1,22 @@
 Cheetah REPL - HQ9+ in Go
-Beta 1
+Beta 2
 
-Instructions:
+Instructions
 
-Execute (on Windows):
-1. Run the executable (cheetah.exe)
+---------------------------------------------------------------------------------
 
-Compile and/or Run (on all platforms):
-1. Make sure Go is installed
-2. On the terminal, type "go build" to compile.
-3. Alternatively, you can type "go run cheetah"
+Compile and Run:
+
+0. Go must be installed
+
+1. On the terminal, type "go build" to compile the program into an executable.
+   The resulting executable does NOT depend on Go and can be run on any machine
+   with the same architecture/platform as the executable program.
+2. You can also type "go run cheetah" for direct execution by Go.
+3. Alternatively, you can type "go install" to install it on the $GOPATH\bin.
+
+Windows Executable:
+
+1. A Windows executable is also shipped with the source code. This can be directly run and
+does NOT depend on Go. Although you can build your own, this is still included in the release 
+for convenience.
