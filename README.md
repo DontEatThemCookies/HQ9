@@ -20,8 +20,8 @@ Original HQ9+ concept credited to Cliff L. Biffle, 2001.
 [Learn more about it here](http://cliffle.com/esoterica/hq9plus/)  
 
 [PyHQ9+ Readme](PythonHQ9%2B/pyhq9-readme.md) | [PyHQ9+ Docs (v1)](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation-v1) | [PyHQ9+ Docs (v2)](https://github.com/DontEatThemCookies/HQ9/wiki/Documentation-v2) |
-[PyHQ9+ Changelog](https://github.com/DontEatThemCookies/HQ9/wiki/Changelog#changelog) |
 
+[Changelog](https://github.com/DontEatThemCookies/HQ9/wiki/Changelog#changelog) |
 [Repository Wiki](https://github.com/DontEatThemCookies/HQ9/wiki) | 
 [Announcements](https://github.com/DontEatThemCookies/HQ9/wiki/Announcements) |
 
