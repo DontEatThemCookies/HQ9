@@ -14,8 +14,7 @@ Q - Multiply "Q" by the number of times it appears in the input and prints it ou
 
 + - Increments an inaccessible accumulator by one.
 ```
-Development work is focused on PythonHQ9+, an implementation in Python.
-A Golang implementation is also in the works.
+Development work is focused on PythonHQ9+ and Cheetah. PyHQ9+ is a Python3 implementation, while Cheetah is written in Go.
 
 Original HQ9+ concept credited to Cliff L. Biffle, 2001. 
 [Learn more about it here](http://cliffle.com/esoterica/hq9plus/)  
