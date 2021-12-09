@@ -1,6 +1,6 @@
 HQ9+ Engine (PythonHQ9+ v2.0) - codename Phoenix
 
-Current Version: Beta II
+Current Version: v1
 
 A full HQ9+ interpreter engine, featuring 
 a REPL, an interpreter and a transcompiler 
@@ -18,7 +18,7 @@ All instructions are case-insensitive in the Phoenix Engine.
 
 USAGE
 
-$ python phoenix.py [input filename] [output filename] [-h]
+$ python phoenix.py [input filename] [output filename].py [-h]
 
 All arguments are optional.
 To enter REPL mode, simply launch the engine without arguments.
@@ -38,4 +38,5 @@ Output filename must end with ".py"
 
 DOCUMENTATION
 
-PythonHQ9+ v2 documentation is coming soon.
+PythonHQ9+ v2 documentation can be found in the official GitHub repository wiki
+https://github.com/DontEatThemCookies/HQ9/wiki/PyHQ9--Documentation-v2

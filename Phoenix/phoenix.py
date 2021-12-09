@@ -1,25 +1,32 @@
 #!/usr/bin/env python3
 """
-Phoenix HQ9+ Engine - BETA 2
+Phoenix HQ9+ Engine v1
 Python 3
 
-The following software is in the Beta stage.
-Bugs may occur, tread with caution.
-
-Part of the PythonHQ9+ project by David Costell
-https://github.com/DontEatThemCookies/HQ9
+Part of the PythonHQ9+ project, which is part of
+David Costell's HQ9+ Implementations Project on
+GitHub: https://github.com/DontEatThemCookies/HQ9
 
 HQ9+ is an esoteric language by Cliff Biffle.
-Learn more about it through the below links:
+Learn more about it from the following links:
 http://cliffle.com/esoterica/hq9plus/
 https://esolangs.org/wiki/HQ9%2B
 
-12/4/2021
+IMPLEMENTATION DISCLOSURE: Where the specification fails
+to define certain details of HQ9+ is where the implementation
+defines its own behavior to fill in the gap of ambiguity.
+As such, any differences or deviations that may be noticed
+is highly likely to be implementation-defined behavior, and
+not part of the specification itself.
+
+12/9/2021
 """
 
 def main():
     # IMPORTS
     import sys
+    import datetime
+    import time
 
     # FUNCTIONS
     def _help_():
@@ -27,7 +34,7 @@ def main():
         This function displays usage help when
         the engine is launched with the -h argument.
         """
-        print("Help on Phoenix Engine:")
+        print("Phoenix Engine - Help:")
         print()
         print("python phoenix.py [input filename] {output filename} {-h}")
         print("[input filename] - Specify name of the file to interpret/transcompile.")
@@ -64,8 +71,7 @@ def main():
                 for _ in range(instruction.upper().count("H")):
                     print("Hello, World!")
 
-            if "Q" or "q" in instruction:
-                # Quine
+            if "Q" in instruction:
                 for _ in range(instruction.upper().count("Q")):
                     print("Q" * instruction.upper().count("Q"))
 
@@ -95,11 +101,11 @@ def main():
 
             if "+" in instruction:
                 for _ in range(instruction.count("+")):
-                    accumulator = accumulator + 1
+                    accumulator += 1
 
             if instruction == "version()":
                 print("Phoenix HQ9+ Engine")
-                print("Version BETA 2")
+                print("Version 1")
             if instruction == "exit()":
                 exit()
 
@@ -109,6 +115,7 @@ def main():
 
         Interprets and execute an HQ9+ source file.
         """
+        time_begin = time.perf_counter()
         accumulator = 0
         try:
             sourcefile = open(file)
@@ -129,7 +136,7 @@ def main():
             for _ in range(line.upper().count("H")):
                 print("Hello, World!")
 
-        if "Q" or "q" in line:
+        if "Q" in line:
             # Quine
             for _ in range(line.upper().count("Q")):
                 print("Q" * line.upper().count("Q"))
@@ -160,11 +167,12 @@ def main():
 
         if "+" in line:
             for _ in range(line.count("+")):
-                accumulator = accumulator + 1
-
+                accumulator += 1
+        time_end = time.perf_counter()
         print("-" * 40)
-        print("Execution complete.")
-        input("Press ENTER to exit.")
+        print("phoenix: Execution successfully completed.")
+        print("Executed in", time_end - time_begin, "seconds")
+        input()
 
     def transcompiler(file, output):
         """
@@ -172,6 +180,7 @@ def main():
 
         Compiles HQ9+ source file to Python 3.
         """
+        time_begin = time.perf_counter()
         try:
             sourcefile = open(file)
         except FileNotFoundError:
@@ -224,19 +233,30 @@ for _ in range(line.upper().count("9")):
         # Accumulator
         instructionlist.append("""
 for _ in range(line.count("+")):
-    accumulator = accumulator + 1""")
+    accumulator += 1""")
 
         finalline = "".join(linelist)
         outputfile.write("#!/usr/bin/env python3"+"\n")
         outputfile.write("\n")
         outputfile.write("# Transcompiled to Python 3 by the Phoenix Engine"+"\n")
+        outputfile.write("# Compiled "+datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")+"\n")
         outputfile.write("\n"+"line = '{}'".format(finalline)+"\n")
         outputfile.write("accumulator = 0"+"\n")
-        for i in instructionlist:
-            outputfile.write(i+"\n")
+
+        if "H" in finalline:
+            outputfile.write(instructionlist[0]+"\n")
+        if "Q" in finalline:
+            outputfile.write(instructionlist[1]+"\n")
+        if "9" in finalline:
+            outputfile.write(instructionlist[2]+"\n")
+        if "+" in finalline:
+            outputfile.write(instructionlist[3]+"\n")
+
         outputfile.write("\n"+"input()"+"\n")
-        print("Transcompilation succeeded.")
-        input("Press ENTER to exit.")
+        time_end = time.perf_counter()
+        print("phoenix: Transcompilation successfully completed.")
+        print("Compiled in", time_end - time_begin, "seconds")
+        input()
 
     # ARGUMENT PARSING
     try:
@@ -249,7 +269,10 @@ for _ in range(line.count("+")):
             filename = param1
             try:
                 # Transcompiler
-                transcompiler(filename, sys.argv[2])
+                if sys.argv[2].endswith(".py"):
+                    transcompiler(filename, sys.argv[2])
+                else:
+                    print("phoenix: Invalid output filename (must end with .py)")
             except IndexError:
                 # Interpreter
                 interpreter(filename)

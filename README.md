@@ -1,6 +1,6 @@
 # David Costell's HQ9+
 
-## Announcement: Development has been focused into Phoenix Engine and Cheetah, written in Python and Golang respectively. Stay tuned for more updates.
+## Announcement: Phoenix v1 has been released, and will be packed into the first PyHQ9+ v2 release soon. Stay tuned for more!
 
 This repository contains my HQ9+ implementations. They are licensed under the MIT License.
 
