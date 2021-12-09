@@ -50,7 +50,7 @@ def main():
         executes them and stands by for more input.
         """
         accumulator = 0
-        print("Phoenix HQ9+ Engine - BETA")
+        print("Phoenix HQ9+ Engine - v1")
         print("PythonHQ9+ v2.0 by David Costell")
         print("REPL Mode - type help() for help")
         print("")
