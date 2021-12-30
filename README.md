@@ -1,6 +1,6 @@
 # David Costell's HQ9+
 
-## Announcement: PyHQ9+ v2 release scheduled for January 2022!
+## Announcement: PyHQ9+ v2 and Cheetah releases scheduled for January 2022!
 
 This repository contains my HQ9+ implementations. They are licensed under the MIT License.
 
