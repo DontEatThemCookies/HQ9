@@ -1,6 +1,6 @@
 # David Costell's HQ9+
 
-## Announcement: Phoenix v1 has been released, and will be packed into the first PyHQ9+ v2 release soon. Stay tuned for more!
+## Announcement: PyHQ9+ v2 release scheduled for January 2022!
 
 This repository contains my HQ9+ implementations. They are licensed under the MIT License.
 
