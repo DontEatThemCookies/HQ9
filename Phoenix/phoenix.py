@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Phoenix HQ9+ Engine v1
+Phoenix HQ9+ Engine v1.1
 Python 3
 
 Part of the PythonHQ9+ project, which is part of
@@ -19,7 +19,7 @@ As such, any differences or deviations that may be noticed
 is highly likely to be implementation-defined behavior, and
 not part of the specification itself.
 
-12/9/2021
+1/1/2022
 """
 
 def main():
@@ -50,7 +50,7 @@ def main():
         executes them and stands by for more input.
         """
         accumulator = 0
-        print("Phoenix HQ9+ Engine - v1")
+        print("Phoenix HQ9+ Engine - v1.1")
         print("PythonHQ9+ v2.0 by David Costell")
         print("REPL Mode - type help() for help")
         print("")
@@ -66,12 +66,12 @@ def main():
                 print("exit() - Exits the Engine.")
 
             # Instruction Parser
-            if "H" or "h" in instruction:
+            elif "H" or "h" in instruction:
                 # Hello, World!
                 for _ in range(instruction.upper().count("H")):
                     print("Hello, World!")
 
-            if "Q" in instruction:
+            if "Q" or "q" in instruction:
                 for _ in range(instruction.upper().count("Q")):
                     print("Q" * instruction.upper().count("Q"))
 
@@ -105,7 +105,7 @@ def main():
 
             if instruction == "version()":
                 print("Phoenix HQ9+ Engine")
-                print("Version 1")
+                print("Version 1.1")
             if instruction == "exit()":
                 exit()
 
@@ -136,7 +136,7 @@ def main():
             for _ in range(line.upper().count("H")):
                 print("Hello, World!")
 
-        if "Q" in line:
+        if "Q" or "q" in line:
             # Quine
             for _ in range(line.upper().count("Q")):
                 print("Q" * line.upper().count("Q"))
@@ -172,7 +172,6 @@ def main():
         print("-" * 40)
         print("phoenix: Execution successfully completed.")
         print("Executed in", time_end - time_begin, "seconds")
-        input()
 
     def transcompiler(file, output):
         """
@@ -235,14 +234,14 @@ for _ in range(line.upper().count("9")):
 for _ in range(line.count("+")):
     accumulator += 1""")
 
-        finalline = "".join(linelist)
-        outputfile.write("#!/usr/bin/env python3"+"\n")
-        outputfile.write("\n")
-        outputfile.write("# Transcompiled to Python 3 by the Phoenix Engine"+"\n")
-        outputfile.write("# Compiled "+datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")+"\n")
-        outputfile.write("\n"+"line = '{}'".format(finalline)+"\n")
-        outputfile.write("accumulator = 0"+"\n")
-
+        finalline = "".join(linelist).upper()
+        outputfile.writelines([
+            "#!/usr/bin/env python3\n\n",
+            "# Transcompiled to Python 3 by the Phoenix Engine\n",
+            f"# Compiled {datetime.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')}\n",
+            f"\nline = '{finalline}'\n", 
+            "accumulator = 0\n"
+        ])
         if "H" in finalline:
             outputfile.write(instructionlist[0]+"\n")
         if "Q" in finalline:
@@ -256,7 +255,6 @@ for _ in range(line.count("+")):
         time_end = time.perf_counter()
         print("phoenix: Transcompilation successfully completed.")
         print("Compiled in", time_end - time_begin, "seconds")
-        input()
 
     # ARGUMENT PARSING
     try:
