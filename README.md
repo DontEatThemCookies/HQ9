@@ -1,6 +1,6 @@
 # David Costell's HQ9+
 
-## Announcement: Cheetah development has paused. \ PythonHQ9+ v2 is coming out in a few days.
+## Announcement: Cheetah development has paused | PythonHQ9+ v2 is coming out in a few days.
 
 This repository contains my HQ9+ implementations. They are licensed under the MIT License.
 
