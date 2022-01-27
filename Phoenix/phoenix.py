@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Phoenix HQ9+ Engine v1.1
-Python 3
+Phoenix HQ9+ Engine v1.2 [PythonHQ9+ v2]
+Python 3.6+
 
 Part of the PythonHQ9+ project, which is part of
 David Costell's HQ9+ Implementations Project on
@@ -19,14 +19,14 @@ As such, any differences or deviations that may be noticed
 is highly likely to be implementation-defined behavior, and
 not part of the specification itself.
 
-1/1/2022
+1/27/2022
 """
+# IMPORTS
+import sys
+import datetime
+import time
 
 def main():
-    # IMPORTS
-    import sys
-    import datetime
-    import time
 
     # FUNCTIONS
     def _help_():
@@ -34,7 +34,7 @@ def main():
         This function displays usage help when
         the engine is launched with the -h argument.
         """
-        print("Phoenix Engine - Help:")
+        print("Phoenix Engine 1.2 - Help:")
         print()
         print("python phoenix.py [input filename] {output filename} {-h}")
         print("[input filename] - Specify name of the file to interpret/transcompile.")
@@ -50,23 +50,23 @@ def main():
         executes them and stands by for more input.
         """
         accumulator = 0
-        print("Phoenix HQ9+ Engine - v1.1")
+        print("Phoenix HQ9+ Engine - v1.2")
         print("PythonHQ9+ v2.0 by David Costell")
-        print("REPL Mode - type help() for help")
+        print("REPL Mode - type 'help' for help")
         print("")
         while True:
             # Input loop
             instruction = input(">>> ")
 
-            if instruction == "help()":
+            if instruction == "help":
                 print("REPL Help:")
                 print("")
-                print("help() - Displays this help message.")
-                print("version() - Displays the Engine's version.")
-                print("exit() - Exits the Engine.")
+                print("help    - Displays this help message.")
+                print("version - Displays the Engine's version.")
+                print("exit    - Exits the Engine.")
 
             # Instruction Parser
-            elif "H" or "h" in instruction:
+            if "H" or "h" in instruction:
                 # Hello, World!
                 for _ in range(instruction.upper().count("H")):
                     print("Hello, World!")
@@ -103,10 +103,11 @@ def main():
                 for _ in range(instruction.count("+")):
                     accumulator += 1
 
-            if instruction == "version()":
+            if instruction == "version":
                 print("Phoenix HQ9+ Engine")
-                print("Version 1.1")
-            if instruction == "exit()":
+                print("Version 1.2 | 01/27/22")
+
+            if instruction == "exit":
                 exit()
 
     def interpreter(file):
@@ -124,10 +125,8 @@ def main():
             print()
             print("Ensure the filename was correctly spellled")
             print("and that the specified file exists.")
-            input();exit()
-        linelist = []
-        for line in sourcefile:
-            linelist.append(line.strip())
+            exit()
+        linelist = [line.strip() for line in sourcefile]
         line = "".join(linelist)
 
         # Instruction Parser
@@ -168,10 +167,11 @@ def main():
         if "+" in line:
             for _ in range(line.count("+")):
                 accumulator += 1
+
         time_end = time.perf_counter()
         print("-" * 40)
         print("phoenix: Execution successfully completed.")
-        print("Executed in", time_end - time_begin, "seconds")
+        print(f"Executed in {time_end - time_begin} seconds")
 
     def transcompiler(file, output):
         """
@@ -187,26 +187,24 @@ def main():
             print()
             print("Ensure the filename was correctly spellled")
             print("and that the specified file exists.")
-            input();exit()
+            exit()
         outputfile = open(output, "w")
-        instructionlist = []
-        linelist = []
-        for line in sourcefile:
-            linelist.append(line.strip())
+        linelist = [line.strip() for line in sourcefile]
 
         # Instruction Parser
+        instructionlist = (
         # Hello, World!
-        instructionlist.append("""
+        """
 for _ in range(line.upper().count("H")):
-    print("Hello, World!")""")
+    print("Hello, World!")""",
 
         # Quine
-        instructionlist.append("""
+        """
 for _ in range(line.upper().count("Q")):
-    print("Q" * line.upper().count("Q"))""")
+    print("Q" * line.upper().count("Q"))""",
 
         # 99 Bottles of Beer
-        instructionlist.append("""
+        """
 for _ in range(line.upper().count("9")):
     beer = 99
     while beer > 0:
@@ -227,21 +225,20 @@ for _ in range(line.upper().count("9")):
         if beer == 0:
             break
     print("No more bottles of beer on the wall, no more bottles of beer.")
-    print("Go to the store and buy some more, 99 bottles of beer on the wall.")""")
+    print("Go to the store and buy some more, 99 bottles of beer on the wall.")""",
 
         # Accumulator
-        instructionlist.append("""
+        """
 for _ in range(line.count("+")):
     accumulator += 1""")
 
         finalline = "".join(linelist).upper()
-        outputfile.writelines([
+        outputfile.writelines((
             "#!/usr/bin/env python3\n\n",
-            "# Transcompiled to Python 3 by the Phoenix Engine\n",
             f"# Compiled {datetime.datetime.now().strftime('%m/%d/%Y, %H:%M:%S')}\n",
             f"\nline = '{finalline}'\n", 
             "accumulator = 0\n"
-        ])
+        ))
         if "H" in finalline:
             outputfile.write(instructionlist[0]+"\n")
         if "Q" in finalline:
@@ -253,8 +250,10 @@ for _ in range(line.count("+")):
 
         outputfile.write("\n"+"input()"+"\n")
         time_end = time.perf_counter()
+        sourcefile.close()
+        outputfile.close()
         print("phoenix: Transcompilation successfully completed.")
-        print("Compiled in", time_end - time_begin, "seconds")
+        print(f"Compile time {time_end - time_begin} seconds")
 
     # ARGUMENT PARSING
     try:

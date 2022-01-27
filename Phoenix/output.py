@@ -1,9 +1,8 @@
-# This is a sample output file from the transcompiler.
+# Sample output of Phoenix transcompiler
 
 #!/usr/bin/env python3
 
-# Transcompiled to Python 3 by the Phoenix Engine
-# Compiled 12/09/2021, 19:08:33
+# Compiled 01/27/2022, 19:46:22
 
 line = 'HQQQQ+'
 accumulator = 0
